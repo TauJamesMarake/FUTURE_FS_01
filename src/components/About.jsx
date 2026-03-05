@@ -4,7 +4,7 @@ import { techStack } from '../models/techStack.js';
 import { skills } from '../models/skills.js'
 // import Resume from './Resume.jsx';
 
-// Displays skills, services, and statistics
+// Displays skills, services, and techstack
 function About() {
     return (
         <div className="page">
@@ -32,19 +32,17 @@ function About() {
                     <h3>Services</h3>
 
                     {/* Scrollable container */}
-                    <div className="skills-scroll-container">
-                        {skills.map((skill, index) => (
-                            <div key={index} className="skill-item">
-                                <div className="skill-icon">
-                                    <Briefcase size={30} />
-                                </div>
-                                <div className="skill-info">
-                                    <h4>{skill.title}</h4>
-                                    <p>{skill.description}</p>
-                                </div>
+                    {skills.map((skill, index) => (
+                        <div key={index} className="skill-item">
+                            <div className="skill-icon">
+                                <Briefcase size={30} />
                             </div>
-                        ))}
-                    </div>
+                            <div className="skill-info">
+                                <h4>{skill.title}</h4>
+                                <p>{skill.description}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
                 {/* RIGHT COLUMN */}

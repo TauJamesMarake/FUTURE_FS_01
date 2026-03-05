@@ -2,7 +2,6 @@ import React from 'react';
 import { Linkedin, Instagram, Github, Mail } from 'lucide-react';
 
 function SocialIcons() {
-    // Each social platform has an icon and a label for accessibility
     const socials = [
         { icon: Linkedin, label: 'Linkedin', url: 'https://linkedin.com/in/tau-marake' },
         { icon: Github, label: 'Github', url: 'https://github.com/TauJamesMarake' },
@@ -12,7 +11,7 @@ function SocialIcons() {
 
     return (
         <div className='social-icons'>
-            {/* MAP THROUGH SOCIALS: Create an icon for each platform */}
+            {/* MAP THROUGH SOCIALS */}
             {socials.map((social, index) => {
                 const Icon = social.icon;
                 return (

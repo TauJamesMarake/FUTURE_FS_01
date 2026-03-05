@@ -19,7 +19,13 @@ function Resume() {
             date: '2023 - 2025',
             title: 'Student Assistant, IT Department',
             company: 'Central University of Technology, Free State',
-            description: 'Offered technical support for hardware and software issues for over 200 student workstations. Provided course-related guidance, proctored tests, and voluntarily conducted classes and academic support sessions for Higher Certificate, 1st Year, and 2nd Year Diploma IT students.'
+            description: 'Offered technical support for hardware and software issues for over 50 student workstations. Provided course related guidance, proctored tests, and voluntarily conducted classes and academic support sessions for Higher Certificate, 1st Year, and 2nd Year Diploma IT students.'
+        },
+        {
+            date: '2026',
+            title: 'Full Stack Web Development Intern',
+            company: 'Future Interns',
+            Description: ''
         },
         {
             date: '2023 - Present',
@@ -116,7 +122,7 @@ function Resume() {
     }
 
     return (
-        <div className="page">
+        <div className="page resume">
             {/* PAGE HEADER */}
             <div className="about-header">
                 <h1>RESUME</h1>
@@ -227,19 +233,19 @@ function Resume() {
                 </div>
 
                 <div className="timeline">
-                    <div className="timeline-item">
+                    <div className="timeline-item skills-list">
                         <h3>Soft Skills</h3>
                         <ul>
                             {softSkills.map((skill) => (
-                                <h4><CornerDownRight size={14} /> {skill.title}</h4>
+                                <h4><CornerDownRight size={14} style={{ color: '#ffa500' }} /> {skill.title}</h4>
                             ))}
                         </ul>
                     </div>
-                    <div className="timeline-item">
+                    <div className="timeline-item skills-list">
                         <h3>Tech Skills</h3>
                         <ol>
                             {techSkills.map((tech) => (
-                                <h4><CornerDownRight size={14} /> {tech.title}</h4>
+                                <h4><CornerDownRight size={14} style={{ color: '#ffa500' }} /> {tech.title}</h4>
                             ))}
                         </ol>
                     </div>

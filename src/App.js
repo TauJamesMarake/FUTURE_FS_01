@@ -4,52 +4,79 @@ import SocialIcons from './components/SocialIcons';
 import Home from './components/Home';
 import About from './components/About';
 import Resume from './components/Resume';
-// import Portfolio from './components/Portfolio';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import profilePicture from './images/profile_picture.jpg';
 import './App.css';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 function App() {
-    // State management
     const [activePage, setActivePage] = useState(0);
-    const [slideDirection, setSlideDIrection] = useState('');
+    const [slideDirection, setSlideDirection] = useState('');
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-
-    // THis function determines the slide dorection and updates the active page
     const handlePageChange = (newPage) => {
-        setSlideDIrection(newPage > activePage ? 'left' : 'right');
+        setSlideDirection(newPage > activePage ? 'left' : 'right');
         setActivePage(newPage);
+        setMobileMenuOpen(false); // close drawer on nav
     };
 
     return (
-        <><div className='app-container'>
-            {/* SIDEBAR: Navigation menu component */}
+        <div className='app-container'>
+            {/* SIDEBAR: visible on desktop, hidden on mobile */}
             <Sidebar activePage={activePage} onPageChange={handlePageChange} />
 
-            {/* MAIN CONTENT: Container with 3D persepective for page transitions */}
+            {/* MOBILE TOP NAVBAR */}
+            <div className='mobile-navbar'>
+                <div className='mobile-navbar-profile'>
+                    <img src={require('./images/firstPrince.jpg')} alt='Profile' />
+                </div>
+                <span className='mobile-navbar-name'>TAU J. MARAKE</span>
+                <button
+                    className='mobile-burger'
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    aria-label='Toggle menu'
+                >
+                    <span className={`burger-line ${mobileMenuOpen ? 'open' : ''}`}></span>
+                    <span className={`burger-line ${mobileMenuOpen ? 'open' : ''}`}></span>
+                    <span className={`burger-line ${mobileMenuOpen ? 'open' : ''}`}></span>
+                </button>
+            </div>
+
+            {/* MOBILE DRAWER OVERLAY */}
+            {mobileMenuOpen && (
+                <div className='mobile-overlay' onClick={() => setMobileMenuOpen(false)} />
+            )}
+
+            {/* MOBILE DRAWER */}
+            <div className={`mobile-drawer ${mobileMenuOpen ? 'drawer-open' : ''}`}>
+                <Sidebar activePage={activePage} onPageChange={handlePageChange} mobile />
+            </div>
+
+            {/* BACKGROUND LAYER */}
+            {/* profile pic slides down smoothly as pages change */}
+            <div className='background-layer'>
+                <img
+                    src={profilePicture}
+                    alt=''
+                    className='background-layer-img'
+                    style={{ transform: `translateY(${activePage * -10}%)` }}
+                />
+            </div>
+
+            {/* MAIN CONTENT */}
             <div className='content-wrapper'>
-                {/* This div applies the slide animation classes dynamically */}
                 <div className={`pages-container slide-${slideDirection}`}>
-                    {/* Render the active page component */}
                     {activePage === 0 && <Home onNavigate={handlePageChange} />}
                     {activePage === 1 && <About />}
                     {activePage === 2 && <Projects />}
                     {activePage === 3 && <Resume />}
-                    {/* {activePage === 3 && <Portfolio />} */}
                     {activePage === 4 && <Contact />}
                 </div>
             </div>
 
             {/* SOCIAL ICONS */}
             <SocialIcons />
-        </div><Router>
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/about' element={<About />} />
-                </Routes>
-            </Router></>
+        </div>
     );
 }
 

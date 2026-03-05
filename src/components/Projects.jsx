@@ -1,46 +1,52 @@
 import React from 'react';
+import { ReactComponent as MoonIcon, } from '../icons/moon.svg';
+import { ReactComponent as SunIcon } from '../icons/sun.svg';
+import { ReactComponent as ShareIcon } from '../icons/share-from-square.svg';
+import { ReactComponent as FIcon } from '../icons/f.svg';
+
 function Projects() {
     // PROJECT LIST:
     const projects = [
         {
             name: 'Quiet Websites',
             tech: 'HTML5, CSS3, JavaScript',
-            text: 'Quet Websites, a collection of minimal web experiences that do very little, on purpose. They Don\'t chase attention, collect data, or demand interaction. Each site focuses on one calm, thoughtful concept, using clean design and lightweight code to create reflective moments on the web.',
-            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
-            link: "https://taujamesmarake/github.io/quiet-websites/index.html"
+            text: 'Quiet Websites, a collection of minimal web experiences that do very little, on purpose. They don\'t chase attention, collect data, or demand interaction. Each site focuses on one calm, thoughtful concept, using clean design and lightweight code to create reflective moments on the web.',
+            image: <MoonIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
+            link: "https://taujamesmarake.github.io/quiet-websites/index.html"
         },
         {
             name: 'Student Accommodation Website',
             tech: "HTML5, CSS3, JavaScript, Node.js",
-            text: "A full-stack web application designed to streamline the student housing application process. Users can browse available rooms, submit accommodation applications with integrated NSFAS funding support, and provides administrators with a comprehensive dashboard to manage applications effeciently",
-            image: "",
+            text: "A full-stack web application designed to streamline the student housing application process. Users can browse available rooms, submit accommodation applications with integrated NSFAS funding support, and provides administrators with a comprehensive dashboard to manage applications efficiently.",
+            image: <SunIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
             link: "https://taujamesmarake.github.io/student-accommodation/index.html"
         },
-        {
-            name: 'Web Portfolio',
-            tech: 'JavaScript, React.js',
-            text: 'This very own portfolio, intended to showcase my personal work and my React.js skills',
-            image: ""
-        },
+        // {
+        //     name: 'ProfessionalWeb Portfolio',
+        //     tech: 'JavaScript, React.js',
+        //     text: 'This very own portfolio, intended to showcase my personal work and my React.js skills',
+        //     image: ""
+        // },
         {
             name: 'Future Self Messenger',
             tech: 'HTML5, CSS3, JavaScript, Node.js',
             text: 'TBD',
-            image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop'
-        },
-        {
-            name: 'AI Debate Arena',
-            tech: 'JavaScript, TypeScript, OpenAI',
-            text: 'TBD',
-            image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop'
+            image: <FIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
+            link: ""
         },
         // {
-        //     name: 'James',
-        //     tech: 'Product Manager',
-        //     text: 'Highly recommended! Sarita understood our vision perfectly and delivered exceptional results every time.',
-        //     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop'
-        // }
+        //     name: 'AI Debate Arena',
+        //     tech: 'JavaScript, TypeScript, OpenAI',
+        //     text: 'TBD',
+        //     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop'
+        // },
     ];
+
+    const handleVisitSite = (link) => {
+        if (link) {
+            window.open(link, '_blank', 'noopener,noreferrer');
+        }
+    };
 
     return (
         <div className="page">
@@ -49,20 +55,28 @@ function Projects() {
                 <h1>PROJECTS</h1>
             </div>
 
-            {/* Display projects cards */}
+            {/* Display project cards */}
             <div className="projects-grid">
                 {projects.map((project, index) => (
                     <div key={index} className="project-card">
                         {/* CARD HEADER */}
                         <div className="project-header">
-                            {/* <div className="project-avatar">
-                                <img src={project.image} alt={project.name} />
-                            </div> */}
+                            <div className="project-avatar">
+                                {project.image}
+                            </div>
                             <div className="project-info">
                                 <h3>{project.name}</h3>
                                 <p>{project.tech}</p>
-                                <p>{project.link}</p>
                             </div>
+
+                            {/* VISIT SITE BUTTON */}
+                            <button
+                                className="project-link-btn"
+                                onClick={() => handleVisitSite(project.link)}
+                                disabled={!project.link}
+                            >
+                                {project.link ? <ShareIcon style={{ width: '25px', height: '25px' }} /> : 'Coming Soon'}
+                            </button>
                         </div>
 
                         {/* PROJECT TEXT */}

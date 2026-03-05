@@ -1,7 +1,16 @@
-import React from 'react';
-import { Mail, Phone, LocateFixed } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { Mail, Phone, LocateFixed, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
+const SERVICE_ID = 'service_gzqbpzh';
+const TEMPLATE_ID = 'template_36v8bvf'; // email to me
+const PUBLIC_KEY = 'WPrBe64DCueuTxpXA';
+const AUTOREPLY_TEMP_ID = 'template_sygzmcc'; // email to user
 
 function Contact() {
+    const form = useRef();
+    const [status, setStatus] = useState('idle');
+
     const contactMethods = [
         {
             icon: Mail,
@@ -23,13 +32,32 @@ function Contact() {
     ];
 
     const handleContact = (method) => {
-        if (method.title === "EMAIL") {
-            window.location.href = `${method.link}`;
-        }
-        else if (method.title === "PHONE") {
-            window.location.href = `${method.link}`;
-        }
-    }
+        if (method.link) window.location.href = method.link;
+    };
+
+    const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, { publicKey: PUBLIC_KEY })
+        .then(() => {
+            // Send USER the auto-reply
+            return emailjs.send(SERVICE_ID, AUTOREPLY_TEMP_ID, {
+                user_name: form.current.user_name.value,
+                user_email: form.current.user_email.value,
+            }, { publicKey: PUBLIC_KEY });
+        })
+        .then(() => {
+            setStatus('success');
+            form.current.reset();
+            setTimeout(() => setStatus('idle'), 5000);
+        })
+        .catch((error) => {
+            console.log('EmailJS Error:', error);
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 5000);
+        });
+};
 
     return (
         <div className="page">
@@ -43,13 +71,15 @@ function Contact() {
                     {contactMethods.map((method, index) => {
                         const Icon = method.icon;
                         return (
-                            <div key={index} className="contact-method" onClick={() => handleContact(method)}>
-                                {/* <a href={method.link} target="_blank" rel="noopener noreferrer"> */}
+                            <div
+                                key={index}
+                                className="contact-method"
+                                onClick={() => handleContact(method)}
+                                style={{ cursor: method.link ? 'pointer' : 'default' }}
+                            >
                                 <div className="contact-method-icon">
                                     <Icon size={30} />
                                 </div>
-
-                                {/* CONTACT INFO */}
                                 <h3>{method.title}</h3>
                                 <p>{method.info}</p>
                             </div>
@@ -57,9 +87,88 @@ function Contact() {
                     })}
                 </div>
 
-                <div className="thanks-message">
-                    Thank You!
-                </div>
+                {/* CONTACT FORM */}
+                <form ref={form} onSubmit={sendEmail} className="contact-form" noValidate>
+                    <div className="contact-form-row">
+                        {/* Name */}
+                        <div className="contact-form-group">
+                            <label htmlFor="user_name">Your Name</label>
+                            <input
+                                id="user_name"
+                                type="text"
+                                name="user_name"
+                                placeholder="John Doe"
+                                required
+                            />
+                        </div>
+
+                        {/* Email */}
+                        <div className="contact-form-group">
+                            <label htmlFor="user_email">Your Email</label>
+                            <input
+                                id="user_email"
+                                type="email"
+                                name="user_email"
+                                placeholder="john@example.com"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    {/* Subject */}
+                    <div className="contact-form-group">
+                        <label htmlFor="subject">Subject</label>
+                        <input
+                            id="subject"
+                            type="text"
+                            name="subject"
+                            placeholder="Project Inquiry"
+                            required
+                        />
+                    </div>
+
+                    {/* Message */}
+                    <div className="contact-form-group">
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows={5}
+                            placeholder="Type your message here!"
+                            required
+                        />
+                    </div>
+
+                    {/* Submit button */}
+                    <button
+                        type="submit"
+                        className="contact-submit-btn"
+                        disabled={status === 'sending'}
+                    >
+                        {status === 'sending' ? (
+                            'Sending...'
+                        ) : (
+                            <>
+                                <Send size={16} style={{ marginRight: '8px' }} />
+                                Send Message
+                            </>
+                        )}
+                    </button>
+
+                    {/* Feedback messages */}
+                    {status === 'success' && (
+                        <p className="form-feedback success">
+                            Thank you, the message is sent! I'll get back to you soon.
+                        </p>
+                    )}
+                    {status === 'error' && (
+                        <p className="form-feedback error">
+                            Something went wrong. Please try again or email me directly.
+                        </p>
+                    )}
+                </form>
+
+                <div className="thanks-message">Thank You!</div>
             </div>
         </div>
     );

@@ -16,8 +16,12 @@ const skills = [
     //     description: 'Secure coding practices, authentication & authorisation, basic network security concepts, malware awareness & prevention, data protection & privacy principles, risk & threat analysis'
     // },
     {
-        title: 'UI/UX & GRAPHIC DESIGN',
-        description: 'Designing interfaces, digital artwork, posters, flyers & album covers.'
+        title: 'UI/UX DESIGN',
+        description: 'Designing user interfaces, frontend design.'
+    },
+    {
+        title: 'GRAPHIC DESIGN',
+        description: 'Designing digital artwork, posters, flyers & album covers.'
     },
     // {
     //     title: 'DIGITAL ENTREPRENEURSHIP',
