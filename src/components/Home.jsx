@@ -10,28 +10,22 @@ function Home({ onNavigate }) {
                 <h2>TAU <span className='middle-name'>J. </span>MARAKE</h2>
 
                 {/* TAGLINES */}
-                <div className="home-tagline-title bio text-center">
-                    <span className="block sm:inline"><h1>Full Stack Developer</h1></span>
-                    <br className="hidden sm:block" />
-                    <span className="block sm:inline subtitle">
-                        <div className='icon'>
+                <div className="home-tagline-title bio">
+                    <h1>Full Stack Developer</h1>
+                    <div className="subtitle">
+                        <span className='icon'>
                             <img src={FlutterIcon} alt='flutter' /> Flutter
-                        </div>
-                        <div className='icon'>
+                        </span>
+                        <span className='icon'>
                             <img src={CSharpIcon} alt="csharp" /> C#
-                        </div>
-                        <div className='icon'>
+                        </span>
+                        <span className='icon'>
                             <img src={JavaScriptIcon} alt="JavaScript" /> JavaScript
-                        </div>
-                        <div className='icon'>
+                        </span>
+                        <span className='icon'>
                             <img src={ReactIcon} alt="react" /> React.js
-                        </div>
-                        {/* <div className='icon'>
-                            <img src={nodejs} height={20} width={20} alt="nodejs" style={{ objectFit: 'cover', objectPosition: 'top' }} />
-                            Node.js
-                        </div> */}
-                    </span>
-                    <br className="hidden sm:block" />
+                        </span>
+                    </div>
                 </div>
                 <br />
 
