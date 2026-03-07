@@ -779,7 +779,7 @@ body {
     font-size: 14px;
 }
 
-/* Share / visit button — sits inline at end of header row */
+/* Visit button */
 .project-link-btn {
     background: rgba(255, 165, 0, 0.12);
     border: 1.5px solid rgba(255, 165, 0, 0.35);
@@ -810,10 +810,10 @@ body {
     transform: translateY(-2px);
 }
 
-/* Disabled "Coming Soon" state */
+/* Disable the visit btn  */
 .project-link-btn:disabled {
-    background: rgba(255,255,255,0.06);
-    border-color: rgba(255,255,255,0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
     color: #888;
     fill: #888;
     cursor: default;
@@ -942,8 +942,7 @@ body {
 
 .contact-form-group input:focus,
 .contact-form-group textarea:focus {
-    border-color: var(--primary-color)
-;
+    border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.15);
 }
 
