@@ -11,7 +11,7 @@ import { softSkills, techSkills } from '../models/skills';
 
 function Resume() {
     const [selectedCertificate, setSelectedCertificate] = useState(null);
-    const [selectedFile, setSelectedFile] = useState(null);
+    // const [selectedFile, setSelectedFile] = useState(null);
 
     // EXPERIENCE DATA
     const experiences = [
@@ -109,18 +109,18 @@ function Resume() {
         setSelectedCertificate(cert);
     };
 
-    const openFile = (cvFile) => {
-        setSelectedFile(cvFile);
-    }
+    // const openFile = (cvFile) => {
+    //     setSelectedFile(cvFile);
+    // }
 
     // CLOSE CERTIFICATE MODAL
     const closeCertificate = () => {
         setSelectedCertificate(null);
     };
 
-    const closeFile = () => {
-        setSelectedFile(null);
-    }
+    // const closeFile = () => {
+    //     setSelectedFile(null);
+    // }
 
     return (
         <div className="page resume">
