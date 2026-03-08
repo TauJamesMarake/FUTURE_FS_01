@@ -1,11 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { Mail, Phone, LocateFixed, Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-
-const SERVICE_ID = 'service_gzqbpzh';
-const TEMPLATE_ID = 'template_36v8bvf'; // email to me
-const PUBLIC_KEY = 'WPrBe64DCueuTxpXA';
-const AUTOREPLY_TEMP_ID = 'template_sygzmcc'; // email to user
+import { saveContact } from '../services/api'; //saving form to Supabase via backend
+import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY, AUTOREPLY_TEMP_ID } from '../config'; // Load EmailJS config from .env    
 
 function Contact() {
     const form = useRef();
@@ -39,15 +36,25 @@ function Contact() {
         e.preventDefault();
         setStatus('sending');
 
+        const formData = {
+            name: form.current.user_name.value,
+            email: form.current.user_email.value,
+            subject: form.current.subject.value,
+            message: form.current.message.value,
+        };
+
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, { publicKey: PUBLIC_KEY })
             .then(() => {
-                // Send USER the auto-reply
+                // Sends USER the auto-reply
                 return emailjs.send(SERVICE_ID, AUTOREPLY_TEMP_ID, {
                     user_name: form.current.user_name.value,
                     user_email: form.current.user_email.value,
                 }, { publicKey: PUBLIC_KEY });
             })
             .then(() => {
+                // Saves message to Supabase via backend
+                saveContact(formData).catch(err => console.warn('Backend save failed:', err));
+
                 setStatus('success');
                 form.current.reset();
                 setTimeout(() => setStatus('idle'), 5000);
