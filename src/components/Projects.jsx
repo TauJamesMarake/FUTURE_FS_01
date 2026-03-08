@@ -3,6 +3,7 @@ import { ReactComponent as MoonIcon, } from '../icons/moon.svg';
 import { ReactComponent as SunIcon } from '../icons/sun.svg';
 import { ReactComponent as ShareIcon } from '../icons/share-from-square.svg';
 import { ReactComponent as FIcon } from '../icons/f.svg';
+import { ReactComponent as SquareCaretIcon } from '../icons/square-caret-right.svg';
 
 function Projects() {
     // PROJECT LIST:
@@ -10,7 +11,7 @@ function Projects() {
         {
             name: 'Quiet Websites',
             tech: 'HTML5, CSS3, JavaScript',
-            text: 'Quiet Websites, a collection of minimal web experiences that do very little, on purpose. They don\'t chase attention, collect data, or demand interaction. Each site focuses on one calm, thoughtful concept, using clean design and lightweight code to create reflective moments on the web.',
+            text: 'A collection of minimal web experiences that do very little, on purpose. They don\'t chase attention, collect data, or demand interaction. Each site focuses on one calm, thoughtful concept, using CLEAN design and lightweight code to create reflective moments on the web.',
             image: <MoonIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
             link: "https://taujamesmarake.github.io/quiet-websites/index.html"
         },
@@ -21,16 +22,17 @@ function Projects() {
             image: <SunIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
             link: "https://taujamesmarake.github.io/student-accommodation/index.html"
         },
-        // {
-        //     name: 'ProfessionalWeb Portfolio',
-        //     tech: 'JavaScript, React.js',
-        //     text: 'This very own portfolio, intended to showcase my personal work and my React.js skills',
-        //     image: ""
-        // },
+        {
+            name: 'Professional Web Portfolio',
+            tech: 'JavaScript, React.js, Node.js, PostgreSQL(Supabase)',
+            text: 'A clean, handcrafted portfolio - a space to share my creative work, process, and what I\'m building next.',
+            image: <SquareCaretIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
+            link: "https://jtaumarake-portfolio.vercel.app"
+        },
         {
             name: 'Future Self Messenger',
-            tech: 'HTML5, CSS3, JavaScript, Node.js',
-            text: 'TBD',
+            tech: 'HTML5, CSS3, JavaScript, Node.js, Express, PostgreSQL',
+            text: 'A full Stck web app for sending scheduled e,ails to your future self. fetaures real-time scheduling, automated email delivery, and a modern responsive UI',
             image: <FIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
             link: ""
         },
