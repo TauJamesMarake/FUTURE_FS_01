@@ -295,7 +295,7 @@ body {
 .home-content h1 {
     font-size: 33px;
     /* margin-bottom: 10px; */
-    color: #FFF;
+    color: var(--primary-white);
 }
 
 .home-content .subtitle {
@@ -321,8 +321,7 @@ body {
 .home-content h2 {
     font-size: 64px;
     margin-bottom: 10px;
-    color: #FFF;
-    color: #FFF;
+    color: var(--primary-white);
 }
 
 
@@ -354,7 +353,7 @@ body {
 }
 
 .home-btn {
-    background: #000;
+    background: #2a2a2a;
     color: #fff;
     padding: 15px 35px;
     border: none;
@@ -631,7 +630,7 @@ body {
 }
 
 .certificate-modal-content {
-    background: white;
+    background: #ccc;
     border-radius: 12px;
     width: 90%;
     max-width: 1000px;
@@ -690,7 +689,7 @@ body {
     gap: 6px;
     margin-top: 10px;
     padding: 8px 16px;
-    background: #4CAF50;
+    background: #000;
     color: white;
     border: none;
     border-radius: 6px;
@@ -701,7 +700,9 @@ body {
 }
 
 .view-certificate:hover {
-    background: #45a049;
+    background: var(--primary-color);
+    transition: .5s;
+    transform: translateY(-2px);
 }
 
 /* Responsive Design */
@@ -925,7 +926,7 @@ body {
 
 .contact-method {
     padding: 40px 20px;
-    background: var(--primary-white);
+    background: #2a2a2a;
     border-radius: 15px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -945,15 +946,16 @@ body {
 .contact-method h3 {
     font-size: 18px;
     margin-bottom: 10px;
+    color: var(--primary-white);
 }
 
 .contact-method p {
-    color: #666;
+    color: var(--primary-white);
     font-size: 14px;
 }
 
 .thanks-message {
-    background: #000;
+    background: #2a2a2a;
     color: var(--primary-white);
     padding: 30px;
     border-radius: 15px;
@@ -997,7 +999,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
     padding: 0.75rem 1rem;
-    color: #fff;
+    color: var(--primary-white);
     font-size: 0.95rem;
     font-family: inherit;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -1020,7 +1022,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background: #2a2a2a;
     color: var(--primary-white);
     border: none;
     border-radius: 25px;
@@ -1327,6 +1329,10 @@ body {
     .home-description {
         max-width: 100%;
         color: var(--primary-white);
+    }
+
+    .home-btn {
+        background: #2a2a2a;
     }
 
     /* ABOUT PAGE */

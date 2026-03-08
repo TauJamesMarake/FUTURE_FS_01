@@ -134,7 +134,7 @@ function Contact() {
                             id="message"
                             name="message"
                             rows={5}
-                            placeholder="Type your message here!"
+                            placeholder="Type your message here."
                             required
                         />
                     </div>
@@ -150,7 +150,7 @@ function Contact() {
                         ) : (
                             <>
                                 <Send size={16} style={{ marginRight: '8px' }} />
-                                Send Message
+                                Send
                             </>
                         )}
                     </button>

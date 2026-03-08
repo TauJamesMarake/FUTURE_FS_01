@@ -15,17 +15,18 @@ function Resume() {
 
     // EXPERIENCE DATA
     const experiences = [
+        
+        {
+            date: '2026',
+            title: 'Full Stack Web Development Intern',
+            company: 'Future Interns',
+            description: 'Build and maintain both the frontend (user interface) and backend (server, database, and logic) of web applications. Develop website features, write, and fix bugs to ensure the application works smoothly across the entire system and a completion of tasks.'
+        },
         {
             date: '2023 - 2025',
             title: 'Student Assistant, IT Department',
             company: 'Central University of Technology, Free State',
             description: 'Offered technical support for hardware and software issues for over 50 student workstations. Provided course related guidance, proctored tests, and voluntarily conducted classes and academic support sessions for Higher Certificate, 1st Year, and 2nd Year Diploma IT students.'
-        },
-        {
-            date: '2026',
-            title: 'Full Stack Web Development Intern',
-            company: 'Future Interns',
-            Description: 'Build and maintain both the frontend (user interface) and backend (server, database, and logic) of web applications. Develop website features, write and test code, and fix bugs to ensure the application works smoothly across the entire system.'
         },
         {
             date: '2023 - Present',
@@ -253,7 +254,7 @@ function Resume() {
             </div>
 
             {/* CV SECTION  */}
-            <div className="resume-section">
+            {/* <div className="resume-section">
                 <div className="section-header">
                     <div className="section-icon">
                         <FileText size={24} />
@@ -272,10 +273,10 @@ function Resume() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* CV MODAL */}
-            {selectedFile && (
+            {/* {selectedFile && (
                 <div className="certificate-modal" onClick={closeFile}>
                     <div className="certificate-modal-content" onClick={(e) => e.stopPropagation()}>
                         <button className="close-modal" onClick={closeFile}>
@@ -290,7 +291,7 @@ function Resume() {
                         />
                     </div>
                 </div>
-            )}
+            )} */}
         </div>
     );
 }
