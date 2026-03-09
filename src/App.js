@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import SocialIcons from './components/SocialIcons';
 import Home from './components/Home';
@@ -9,8 +9,12 @@ import Contact from './components/Contact';
 import profilePicture from './images/profile_picture.jpg';
 import './App.css';
 
+
 function App() {
     const [activePage, setActivePage] = useState(0);
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [activePage]);
     const [slideDirection, setSlideDirection] = useState('');
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
