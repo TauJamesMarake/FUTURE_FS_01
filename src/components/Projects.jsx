@@ -32,7 +32,7 @@ function Projects() {
         {
             name: 'Future Self Messenger',
             tech: 'HTML5, CSS3, JavaScript, Node.js, Express, PostgreSQL',
-            text: 'A full Stck web app for sending scheduled e,ails to your future self. fetaures real-time scheduling, automated email delivery, and a modern responsive UI',
+            text: 'A full Stack web app for sending scheduled emails to your future self. fetaures real-time scheduling, automated email delivery, and a modern responsive UI',
             image: <FIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
             link: ""
         },

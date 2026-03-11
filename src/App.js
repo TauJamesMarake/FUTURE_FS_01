@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import profilePicture from './images/profile_picture.jpg';
 import './App.css';
 
-
 function App() {
     const [activePage, setActivePage] = useState(0);
     useEffect(() => {
