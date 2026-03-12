@@ -16,8 +16,12 @@ const skills = [
     //     description: 'Secure coding practices, authentication & authorisation, basic network security concepts, malware awareness & prevention, data protection & privacy principles, risk & threat analysis'
     // },
     {
+        title: 'FRONTEND DEVELOPMENT',
+        description: 'I specialise in building responsive, user focused web and mobile interfaces that combine clean dsign with effecient functionality. With my strong foundation inmodern developement tools and frameworks, I transform design concepts into scalable and interactive experience. Clean code, optimising performance, and creating seamless user interactions across devices.'
+    },
+    {
         title: 'UI/UX DESIGN',
-        description: 'Designing user interfaces, frontend design.'
+        description: 'I design intuitive and visually engaging user interfaces that prioritise usability and user experience. Combining creativity and a deep understanding of user behaviour, I craft designs aesthetically compelling and functional. My focus is on clarity, accessiblity, and enhancing how users interact with products.'
     },
     {
         title: 'GRAPHIC DESIGN',
@@ -27,10 +31,10 @@ const skills = [
     //     title: 'DIGITAL ENTREPRENEURSHIP',
     //     description: 'Launching and managing business like Anna\'s Spices & Treats, blending strategy with execution to bring ideas to life.'
     // },
-    {
-        title: 'MUSIC PRODUCTION & DISTRIBUTION',
-        description: 'I create, produce, and distribute original music as an independent artist. My work covers everything from songwriting to mixing and mastering, and release planning. I manage my distribution through CDBaby. In addition, I design my own cover art and visual branding, giving my music a unified creative identity.'
-    }
+    // {
+    //     title: 'MUSIC PRODUCTION & DISTRIBUTION',
+    //     description: 'I create, produce, and distribute original music as an independent artist. My work covers everything from songwriting to mixing and mastering, and release planning. I manage my distribution through CDBaby. In addition, I design my own cover art and visual branding, giving my music a unified creative identity.'
+    // }
 ];
 
 const softSkills = [

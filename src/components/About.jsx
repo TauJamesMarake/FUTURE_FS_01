@@ -10,7 +10,7 @@ function About() {
         <div className="page">
             {/* PAGE HEADER: Title with profile image */}
             <div className="about-header">
-                <h1>ABOUT ME</h1>
+                <h1>ABOUT</h1>
             </div>
 
             {/* INTRODUCTION SECTION */}
@@ -46,15 +46,15 @@ function About() {
                 </div>
 
                 {/* RIGHT COLUMN */}
-                <div className="fun-facts">
+                <div className="tech-stack">
                     <h3>Tech Stack</h3>
                     <div className="skills-scroll-container">
-                        <div className="stats-grid">
+                        <div className="tech-grid">
                             {/* MAP THROUGH TECH STACK */}
                             {techStack.map((tech, index) => (
-                                <div key={index} className="stat-item">
-                                    <div className="stat-icon">{tech.icon}</div>
-                                    <div className="stat-label">{tech.label}</div>
+                                <div key={index} className="tech-item">
+                                    <div className="tech-icon">{tech.icon}</div>
+                                    <div className="tech-label">{tech.label}</div>
                                 </div>
                             ))}
                         </div>

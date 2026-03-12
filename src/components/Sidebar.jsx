@@ -1,15 +1,16 @@
 import React from 'react';
-import { Home, User, FileText, MessageSquare, Mail } from 'lucide-react';
+import { Home, User, FileText, MessageSquare, Mail, } from 'lucide-react';
 import profilePicture from '../images/firstPrince.jpg';
 
 function Sidebar({ activePage, onPageChange, mobile }) {
 
     const MenuItems = [
         { icon: Home, label: 'HOME' },
-        { icon: User, label: 'ABOUT ME' },
+        { icon: User, label: 'ABOUT' },
+        // { icon: Briefcase, label: 'SERVICES' },
         { icon: MessageSquare, label: 'PROJECTS' },
         { icon: FileText, label: 'RESUME' },
-        { icon: Mail, label: 'CONTACT ME' },
+        { icon: Mail, label: 'CONTACT' },
     ];
 
     return (

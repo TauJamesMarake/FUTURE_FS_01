@@ -31,13 +31,13 @@ function Home({ onNavigate }) {
 
                 {/* DESCRIPTION */}
                 <p className="home-description">
-                    I build digital experiences that blend functionality, creativity, and intent, helping businesses get more customers and manage operations online. From crafted interfaces to structured systems, my work reflects a quiet precision.<br /><br />
+                    I design and develop scalable systems and digital experiences that blend functionality, creativity, and intent, helping businesses get more customers and manage operations online. I specialise in building functional modern web and mobile appplications.<br /><br />
                     There's more - <em>explore the craft behind the code.</em>
                 </p>
 
                 {/* CTA ABOUT ME BUTTON */}
                 <button className="home-btn" onClick={() => onNavigate(1)}>
-                    <span>MORE ABOUT ME</span>
+                    <span>EXPLORE THE WORKS</span>
                 </button>
             </div>
 
