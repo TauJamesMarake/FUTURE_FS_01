@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Mail, Phone, LocateFixed, Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-import { saveContact } from '../services/api'; //saving form to Supabase via backend
+import { saveContact } from '../services/api';
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY, AUTOREPLY_TEMP_ID } from '../config'; // Load EmailJS config from .env    
 
 function Contact() {
@@ -52,7 +52,7 @@ function Contact() {
                 }, { publicKey: PUBLIC_KEY });
             })
             .then(() => {
-                // Saves message to Supabase via backend
+                // Saves message to Supabase
                 saveContact(formData).catch(err => console.warn('Backend save failed:', err));
 
                 setStatus('success');

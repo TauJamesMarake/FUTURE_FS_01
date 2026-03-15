@@ -156,14 +156,12 @@ body {
 }
 
 /* Active navigation item */
-/* Active navigation item */
 .nav-item.active {
     background: rgba(0, 0, 0, 0.1);
     border-left-color: #000;
     color: #000;
 }
 
-/* 3D CONTENT WRAPPER */
 /* 3D CONTENT WRAPPER */
 
 .content-wrapper {
@@ -188,12 +186,10 @@ body {
 }
 
 /* Apply slide-left animation */
-/* Apply slide-left animation */
 .pages-container.slide-left {
     animation: slideOutLeft 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-/* Apply slide-right animation */
 /* Apply slide-right animation */
 .pages-container.slide-right {
     animation: slideOutRight 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -228,7 +224,6 @@ body {
 }
 
 /* BASE PAGE STYLES */
-/* BASE PAGE STYLES */
 
 .page {
     width: 100%;
@@ -244,14 +239,12 @@ body {
 }
 
 /* SOCIAL ICONS SIDEBAR */
-/* SOCIAL ICONS SIDEBAR */
 
 .social-icons {
     position: fixed;
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
-    /* Center vertically */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -490,8 +483,6 @@ body {
 
 /* Tech stack grid */
 
-/* Tech stack grid */
-
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -716,59 +707,6 @@ body {
     }
 }
 
-/* PORTFOLIO PAGE STYLES */
-
-/* .portfolio-filters {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.filter-btn {
-    padding: 10px 25px;
-    border: 2px solid #ddd;
-    background: var(--primary-white);
-    background: var(--primary-white);
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.filter-btn.active {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--primary-white);
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--primary-white);
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.portfolio-item {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    height: 300px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-5px);
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
 /* PROJECTS PAGE STYLES */
 
 .projects-grid {
@@ -820,7 +758,7 @@ body {
     object-fit: cover;
 }
 
-/* Push info to fill space, btn stays at end */
+/* Push info to fill space */
 .project-info {
     flex: 1;
     min-width: 0;
@@ -879,7 +817,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Disable the visit btn  */
+/* Disable the visit btn only if the link is unavailable */
 .project-link-btn:disabled {
     background: rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.12);
@@ -1066,13 +1004,11 @@ body {
 }
 
 /* MOBILE RESPONSIVE */
-
-/* Mobile top navbar */
 .mobile-navbar {
     display: none;
 }
 
-/* Mobile drawer - hidden on desktop */
+/* Mobile drawer, hidden on desktop */
 .mobile-drawer {
     display: none;
 }

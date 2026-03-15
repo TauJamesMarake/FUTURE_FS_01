@@ -2,7 +2,6 @@ import React from 'react';
 import { Briefcase } from 'lucide-react';
 import { techStack } from '../models/techStack.js';
 import { skills } from '../models/skills.js'
-// import Resume from './Resume.jsx';
 
 // Displays skills, services, and techstack
 function About() {

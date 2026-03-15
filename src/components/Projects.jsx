@@ -36,12 +36,13 @@ function Projects() {
             image: <FIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
             link: ""
         },
-        // {
-        //     name: 'AI Debate Arena',
-        //     tech: 'JavaScript, TypeScript, OpenAI',
-        //     text: 'TBD',
-        //     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop'
-        // },
+        {
+            name: 'Todo REST API',
+            tech: 'Vanilla HTML, CSS, JavaScript, Java21, Spring Boot, Maven',
+            text: 'A fully functional REST API built with Java Spring Boot, serving as a learnign project for developers transitioning from C# ASP.NET Core. Every concept is mapped and explained side-by-side between the two ecosystems.',
+            image: <MoonIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
+            link: "https://github.com/TauJamesMarake/todoapi-java",
+        },
     ];
 
     const handleVisitSite = (link) => {

@@ -20,12 +20,12 @@ function App() {
     const handlePageChange = (newPage) => {
         setSlideDirection(newPage > activePage ? 'left' : 'right');
         setActivePage(newPage);
-        setMobileMenuOpen(false); // close drawer on nav
+        setMobileMenuOpen(false); // closes drawer on nav
     };
 
     return (
         <div className='app-container'>
-            {/* SIDEBAR: visible on desktop, hidden on mobile */}
+            {/* SIDEBAR: Desktop */}
             <Sidebar activePage={activePage} onPageChange={handlePageChange} />
 
             {/* MOBILE TOP NAVBAR */}
@@ -56,7 +56,7 @@ function App() {
             </div>
 
             {/* BACKGROUND LAYER */}
-            {/* profile pic slides down smoothly as pages change */}
+            {/* profile pic slides down smoothly as pages change, parallax feature */}
             <div className='background-layer'>
                 <img
                     src={profilePicture}

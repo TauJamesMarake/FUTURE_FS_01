@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const supabase = require('../supabaseClient');
 
-// POST - Save contact form submission to Supabase
+// POST: Saves contact form submission to Supabase
 router.post('/', async (req, res) => {
     const { user_name, user_email, subject, message } = req.body;
 
-    // Validate all fields (matches your Contact.jsx form fields)
+    // Validate all fields
     if (!user_name || !user_email || !subject || !message) {
         return res.status(400).json({ error: 'All fields are required.' });
     }
@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
     res.status(201).json({ success: true, message: 'Message saved successfully.' });
 });
 
-// GET all messages (for your own admin use later)
+// GET: Gets all messages {for admin use only)
 router.get('/', async (req, res) => {
     const { data, error } = await supabase
         .from('contacts')

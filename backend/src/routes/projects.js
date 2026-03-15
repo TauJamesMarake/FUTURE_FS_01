@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const supabase = require('../supabaseClient');
 
-// GET all projects
 router.get('/', async (req, res) => {
     const { data, error } = await supabase
         .from('projects')
@@ -13,7 +12,6 @@ router.get('/', async (req, res) => {
     res.json(data);
 });
 
-// GET single project by ID
 router.get('/:id', async (req, res) => {
     const { data, error } = await supabase
         .from('projects')

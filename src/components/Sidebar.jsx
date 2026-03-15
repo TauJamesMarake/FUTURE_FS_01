@@ -7,7 +7,6 @@ function Sidebar({ activePage, onPageChange, mobile }) {
     const MenuItems = [
         { icon: Home, label: 'HOME' },
         { icon: User, label: 'ABOUT' },
-        // { icon: Briefcase, label: 'SERVICES' },
         { icon: MessageSquare, label: 'PROJECTS' },
         { icon: FileText, label: 'RESUME' },
         { icon: Mail, label: 'CONTACT' },
@@ -15,7 +14,7 @@ function Sidebar({ activePage, onPageChange, mobile }) {
 
     return (
         <div className={`sidebar ${mobile ? 'sidebar-mobile' : ''}`}>
-            {/* PROFILE IMAGE - only show in desktop sidebar, not mobile drawer header */}
+            {/* PROFILE IMAGE- only show in desktop sidebar, not mobile drawer header */}
             {!mobile && (
                 <div className='sidebar-profile'>
                     <img src={profilePicture} alt='Profile' />

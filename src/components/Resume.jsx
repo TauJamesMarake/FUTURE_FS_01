@@ -6,10 +6,11 @@ import dataScience2Certificate from '../images/certificates/2nd _introduction_to
 import cybersecurityCertificate from '../images/certificates/Introduction_to_Cybersecurity_certificate.pdf';
 import fullStackCertificate from '../images/certificates/Tau-2-687CD61AC590F-2025-07-20-13-42-19.pdf';
 import pythonEssentialsCertificate from '../images/certificates/Python_Essentials_1_certificate.pdf';
-// import cvFile from '../images/certificates/cv - tau j. marake.pdf';
 import { softSkills, techSkills } from '../models/skills';
 
 function Resume() {
+    // I have commented out the download permission to my CV
+
     const [selectedCertificate, setSelectedCertificate] = useState(null);
     // const [selectedFile, setSelectedFile] = useState(null);
 
@@ -109,18 +110,10 @@ function Resume() {
         setSelectedCertificate(cert);
     };
 
-    // const openFile = (cvFile) => {
-    //     setSelectedFile(cvFile);
-    // }
-
     // CLOSE CERTIFICATE MODAL
     const closeCertificate = () => {
         setSelectedCertificate(null);
     };
-
-    // const closeFile = () => {
-    //     setSelectedFile(null);
-    // }
 
     return (
         <div className="page resume">
@@ -252,46 +245,6 @@ function Resume() {
                     </div>
                 </div>
             </div>
-
-            {/* CV SECTION  */}
-            {/* <div className="resume-section">
-                <div className="section-header">
-                    <div className="section-icon">
-                        <FileText size={24} />
-                    </div>
-                    <h2>CURRICULUM VITAE</h2>
-                </div>
-
-                <div className="timeline">
-                    <div className="timeline-item">
-                        <button
-                            onClick={() => openFile(cvFile)}
-                            className="view-certificate"
-                        >
-                            <ExternalLink size={16} />
-                            View Curriculm Vitae (CV)
-                        </button>
-                    </div>
-                </div>
-            </div> */}
-
-            {/* CV MODAL */}
-            {/* {selectedFile && (
-                <div className="certificate-modal" onClick={closeFile}>
-                    <div className="certificate-modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="close-modal" onClick={closeFile}>
-                            <X size={24} />
-                        </button>
-                        <h3>Curriculum Vitae</h3><br />
-                        <iframe
-                            src={cvFile}
-                            className="certificate-viewer"
-                            sandbox="allow-scripts allow-same-origin"
-                            title='Curriculu Vitae'
-                        />
-                    </div>
-                </div>
-            )} */}
         </div>
     );
 }
