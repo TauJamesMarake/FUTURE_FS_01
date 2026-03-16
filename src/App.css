@@ -399,7 +399,6 @@ body {
     font-size: 56px;
     font-weight: 900;
     color: var(--primary-color);
-    color: var(--primary-color);
 }
 
 .about-intro {
@@ -410,11 +409,9 @@ body {
     font-size: 24px;
     margin-bottom: 15px;
     color: var(--primary-white);
-    color: var(--primary-white);
 }
 
 .about-intro p {
-    color: var(--primary-white);
     color: var(--primary-white);
     line-height: 1.6;
 }
@@ -438,7 +435,6 @@ body {
 }
 
 .skills-scroll-container {
-    max-height: 600px;
     max-height: 600px;
     overflow-y: auto;
     padding-right: 10px;
@@ -469,13 +465,9 @@ body {
     color: var(--primary-white);
     border-bottom: 10px solid var(--primary-color);
     border-radius: 0 0 30px 0;
-    color: var(--primary-white);
-    border-bottom: 10px solid var(--primary-color);
-    border-radius: 0 0 30px 0;
 }
 
 .skill-info p {
-    color: var(--primary-white);
     color: var(--primary-white);
     font-size: 14px;
     line-height: 1.5;
@@ -514,7 +506,6 @@ body {
 .tech-label {
     font-size: 14px;
     margin-top: 5px;
-
     font-weight: 900;
     color: var(--primary-color);
     text-transform: uppercase;
@@ -1187,7 +1178,6 @@ body {
 
     .content-wrapper {
         margin-top: 60px;
-        /* height of mobile navbar */
         perspective: none;
         overflow: visible;
     }
@@ -1294,13 +1284,14 @@ body {
         color: var(--primary-white);
         border-bottom: 5px solid var(--primary-color);
         border-radius: 0 0 50px 0;
+        display: inline-flexbox;
     }
 
     .about-content .skill-info p {
         color: var(--primary-white);
     }
 
-    .stats-grid {
+    .tech-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
