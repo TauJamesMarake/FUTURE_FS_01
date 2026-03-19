@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Mail, Phone, LocateFixed, Send } from 'lucide-react';
+import { Mail, Phone, LocateFixed } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { saveContact } from '../services/api';
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY, AUTOREPLY_TEMP_ID } from '../config'; // Load EmailJS config from .env    
@@ -157,7 +157,6 @@ function Contact() {
                         ) : (
                             <>
                                 Send Message
-                                <Send size={16} style={{ marginLeft: '8px' }} />
                             </>
                         )}
                     </button>
