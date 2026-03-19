@@ -371,6 +371,7 @@ body {
     justify-content: center;
 }
 
+
 .home-image-circle {
     width: 100%;
     height: 100%;
@@ -1008,7 +1009,7 @@ body {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     body {
         overflow: auto;
@@ -1187,7 +1188,6 @@ body {
         min-height: calc(100vh - 60px);
     }
 
-    /* Base page padding on mobile */
     .page {
         padding: 30px 20px 80px;
         height: auto;
