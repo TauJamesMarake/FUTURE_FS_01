@@ -9,6 +9,13 @@ function Projects() {
     // PROJECT LIST:
     const projects = [
         {
+            name: 'MAS Automotive',
+            tech: 'HTML5, CSS3, JavaScript, PHP, MySQL, Apache',
+            text: 'MAS Auto – Automotive Workshop Website. A production-ready multi-page business website built for MAS Auto, a professional automotive workshop in Polokwane, South Africa. Features a dark automotive aesthetic (black/red/metallic), smooth scroll animations, filterable gallery with lightbox, service booking form with WhatsApp deep-link redirect, embedded Google Maps, and a PHP/MySQL backend with PHPMailer for enquiry handling. Deployed on HostAfrica shared hosting (Apache/PHP).',
+            image: <SquareCaretIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
+            link: "https://taujamesmarake.github.io/mas-auto/"
+        },
+        {
             name: 'Quiet Websites',
             tech: 'HTML5, CSS3, JavaScript',
             text: 'A collection of minimal web experiences that do very little, on purpose. They don\'t chase attention, collect data, or demand interaction. Each site focuses on one calm, thoughtful concept, using CLEAN design and lightweight code to create reflective moments on the web.',
