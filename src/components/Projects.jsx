@@ -16,6 +16,13 @@ function Projects() {
             link: "https://taujamesmarake.github.io/mas-auto/"
         },
         {
+            name: 'LEADit (Mini CRM)',
+            tech: 'JavaScript, React.js, Node.js, Express.js, PostgreSQL(Supabase), Render',
+            text: 'A simple yet functional CRM system that allows a business owner or admin to: view leads coming from website contact forms, update lead status (new → contacted → converted), add follow-up notes, manage leads from a secure admin panel. This mirrors how real-world companies manage incoming clients.',
+            image: <SunIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
+            link: 'https://leadit-eight.vercel.app/'
+        },
+        {
             name: 'Quiet Websites',
             tech: 'HTML5, CSS3, JavaScript',
             text: 'A collection of minimal web experiences that do very little, on purpose. They don\'t chase attention, collect data, or demand interaction. Each site focuses on one calm, thoughtful concept, using CLEAN design and lightweight code to create reflective moments on the web.',
@@ -32,7 +39,7 @@ function Projects() {
         {
             name: 'Professional Web Portfolio',
             tech: 'JavaScript, React.js, Node.js, PostgreSQL(Supabase)',
-            text: 'A clean, handcrafted portfolio - a space to share my creative work, process, and what I\'m building next.',
+            text: 'A well-built portfolio website shows: What you can build, How you think as a developer, How professionally you present yourself',
             image: <SquareCaretIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
             link: "https://jtaumarake-portfolio.vercel.app"
         },
