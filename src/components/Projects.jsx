@@ -39,7 +39,7 @@ function Projects() {
         {
             name: 'Professional Web Portfolio',
             tech: 'JavaScript, React.js, Node.js, PostgreSQL(Supabase)',
-            text: 'A well-built portfolio website shows: What you can build, How you think as a developer, How professionally you present yourself',
+            text: 'A well-built portfolio website shows: What I can build, How I think as a developer, How professionally I present myself',
             image: <SquareCaretIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
             link: "https://jtaumarake-portfolio.vercel.app"
         },
