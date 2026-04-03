@@ -69,7 +69,7 @@ function Projects() {
         <div className="page">
             {/* PAGE HEADER */}
             <div className="about-header">
-                <h1>PROJECTS <span>{projects.length}</span></h1>
+                <h1>PROJECTS <span>({projects.length})</span></h1>
             </div>
 
             {/* Display project cards */}
