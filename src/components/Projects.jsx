@@ -8,6 +8,7 @@ import { ReactComponent as SquareCaretIcon } from '../icons/square-caret-right.s
 function Projects() {
     // PROJECT LIST:
     const projects = [
+        
         {
             name: 'Quiet Websites',
             tech: 'HTML5, CSS3, JavaScript',
@@ -53,7 +54,6 @@ function Projects() {
 
     return (
         <div className="page">
-            {/* PAGE HEADER */}
             <div className="about-header">
                 <h1>PROJECTS</h1>
             </div>
