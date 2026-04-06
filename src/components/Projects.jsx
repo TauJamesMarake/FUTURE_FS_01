@@ -11,7 +11,7 @@ function Projects() {
         {
             name: 'MAS Automotive',
             tech: 'HTML5, CSS3, JavaScript, PHP, MySQL, Apache',
-            text: 'MAS Auto – Automotive Workshop Website. A production-ready multi-page business website built for MAS Auto, a professional automotive workshop in Polokwane, South Africa. Features a dark automotive aesthetic (black/red/metallic), smooth scroll animations, filterable gallery with lightbox, service booking form with WhatsApp deep-link redirect, embedded Google Maps, and a PHP/MySQL backend with PHPMailer for enquiry handling. Deployed on HostAfrica shared hosting (Apache/PHP).',
+            text: 'MAS Auto – Automotive Workshop Website. A production-ready multi-page business website built for MAS Auto, a professional automotive workshop in Polokwane, South Africa. Features a dark automotive aesthetic (black/red/metallic), smooth scroll animations, filterable gallery with lightbox, service booking form with WhatsApp deep-link redirect, embedded Google Maps, and a PHP/MySQL backend with PHPMailer for enquiry handling.',
             image: <SquareCaretIcon style={{ fill: '#ffa500', width: '70px', height: '55px', padding: '4px' }} />,
             link: "https://mas-automotive.vercel.app"
         },
